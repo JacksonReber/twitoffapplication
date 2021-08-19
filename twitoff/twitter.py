@@ -51,6 +51,6 @@ def insert_example_users():
     DB.session.execute(sqlalchemy.delete(Tweet).where(Tweet.id.isnot(None)))
     DB.session.execute(sqlalchemy.delete(User).where(User.id.isnot(None)))
     DB.session.commit()
-    users = ["mcuban", "nasa"]
-    for user in users:
-        add_or_update_user(user)
+    # users = ["mcuban", "nasa"]
+    # for user in users:
+#add_or_update_user(user)
