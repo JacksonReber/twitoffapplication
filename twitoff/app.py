@@ -13,7 +13,7 @@ def create_app():
 #    app_dir = os.path.dirname(os.path.abspath(__file__))
 #    database = "sqlite:///{}".format(os.path.join(app_dir, "twitoff.sqlite3"))
 
-    app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql://qhsgcyyyswcfqs:ae65a5a737d88a7419c6edfec11bf79698a9c2d0e0309711fac082c61ef7651a@ec2-54-159-35-35.compute-1.amazonaws.com:5432/d9i1fict1td5c8'
+    app.config["SQLALCHEMY_DATABASE_URI"] = getenv('DATABASE_URI')
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     DB.init_app(app)

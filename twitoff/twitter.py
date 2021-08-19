@@ -6,9 +6,9 @@ from os import getenv
 from .models import DB, Tweet, User
 
 
-#TODO - Don't have raw secrets in our code (create .env file)
-TWITTER_API_KEY = 'OWThec8nmPklIiqYDhqdPR608'#getenv('TWITTER_API_KEY')
-TWITTER_API_KEY_SECRET = 'wLcypW8hLD0fmM7NxpU5zbXEzKyWzdF2XkMTjU1lAXZJGSdvpD'#getenv('TWITTER_API_KEY_SECRET')
+#TODO - 
+TWITTER_API_KEY = getenv('TWITTER_API_KEY')
+TWITTER_API_KEY_SECRET = getenv('TWITTER_API_KEY_SECRET')
 TWITTER_AUTH = tweepy.OAuthHandler(TWITTER_API_KEY, TWITTER_API_KEY_SECRET)
 
 TWITTER = tweepy.API(TWITTER_AUTH)
